@@ -49,8 +49,6 @@ The system is built from three distinct detection modules. Each was trained and 
     # Ensure your trained model files (.h5, .pkl) are in the correct directory
     flask run
     ```
-    The web application will be available at `http://12.0.0.1:5000`.
-
 ---
 
 ## Team Contributions

@@ -24,10 +24,9 @@ The system is built from three distinct detection modules. Each was trained and 
 ---
 
 ## Tech Stack
--   **Backend:** Flask
 -   **Machine Learning:** TensorFlow, Keras, Scikit-learn
 -   **Computer Vision:** OpenCV, Dlib, Scikit-image
--   **Core Libraries:** Python, NumPy, Pillow
+-   **Core Libraries:** Python, NumPy
 
 ---
 

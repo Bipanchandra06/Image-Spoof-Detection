@@ -134,9 +134,50 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 
 ---
 
+## System Architecture & Performance
+The system is built from three distinct detection modules. Each was trained and evaluated independently before being integrated.
+
+| Detection Module       | Key Models Used        | F1-Score |
+| ---------------------- | ---------------------- | :------: |
+| **2D Image Forgery**   | MobileNetV2            | 97.73%   |
+| **Deepfake Detection** | EfficientNetB0, Dlib   | 98.22%   |
+| **3D Mask Spoofing**   | SVM on LBP features    | 96.00%   |
+
+*This was a team project. My primary contribution was the development of the **3D Mask Spoofing** module.*
+
+---
+
+## Tech Stack
+-   **Machine Learning:** TensorFlow, Keras, Scikit-learn
+-   **Computer Vision:** OpenCV, Dlib, Scikit-image
+-   **Core Libraries:** Python, NumPy
+
+---
+
 ## Quick Start
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/[your-username]/image-spoof-detection-system.git
-   cd image-spoof-detection-system
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/[your-username]/image-spoof-detection-system.git
+    cd image-spoof-detection-system
+    ```
+
+2.  **Install Dependencies:**
+    *(It is recommended to use a virtual environment)*
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Run the Flask Application:**
+    ```bash
+    # Ensure your trained model files (.h5, .pkl) are in the correct directory
+    flask run
+    ```
+---
+
+## Team Contributions
+-   **Module 1 (Web App & Preprocessing):** Bipan Chandra
+-   **Module 2 (2D Forgery):** Pratik Ranjan
+-   **Module 3 (Deepfake):** Rithvik Ponnapalli
+-   **Module 4 (3D Mask Spoofing):** Rehan Sherawat
+

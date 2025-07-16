@@ -126,10 +126,10 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 
 ## Results
 
-![Home Page Screenshot](./images/homepage.png)  
+![Home Page Screenshot](./homepage.png)  
 *Figure 1: Application home page (image upload & model selection).*
 
-![Results Page Screenshot](./images/results.png)  
+![Results Page Screenshot](./results.png)  
 *Figure 2: Results page showing per‑module scores and combined verdict.*
 
 ---

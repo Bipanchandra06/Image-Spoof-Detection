@@ -50,11 +50,11 @@ This project, completed for the DA‑221M course (Jan 2025–Apr 2025), implemen
 
 Each uploaded image is preprocessed and then passed through three modules in sequence. Each module outputs a confidence score (real vs. fake), and the final decision is the average of the three (threshold = 0.5).
 
-| Module                        | Model(s)                       | Input Size | Key Technique                      |
-|-------------------------------|--------------------------------|------------|------------------------------------|
-| 2D Image Forgery Detection    | MobileNetV2 (fine-tuned)       | 224 × 224  | CNN + dropout, batch‑norm, GAP     |
-| Deepfake Detection            | EfficientNetB0 (fine-tuned)<br>+ Dlib head‑pose features | 256 × 256  | CNN + facial landmarks & pose      |
-| 3D Mask Spoofing Detection    | SVM (RBF) on LBP features      | varies     | Log‑TV denoising + LBP histogram   |
+| Module                        | Model(s)                       | Input Size |
+|-------------------------------|--------------------------------|------------|
+| 2D Image Forgery Detection    | MobileNetV2 (fine-tuned)       | 224 × 224  |
+| Deepfake Detection            | EfficientNetB0 (fine-tuned)    | 256 × 256  |
+| 3D Mask Spoofing Detection    | SVM (RBF) on LBP features      | varies     |
 
 ---
 
@@ -76,7 +76,6 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 ### Module 1: Data Acquisition & Preprocessing
 
 - **Web App Backend (Flask)**  
-- **LTV Denoising** for micro‑texture clarity  
 - **Deep Models**: resize to 224 × 224, normalize to [0,1]  
 - **LBP Pipeline**: grayscale → Log‑TV denoise → uniform LBP (radius=3, points=24) → histogram → SVM
 
@@ -100,10 +99,7 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 ### Module 3: Deepfake Detection
 
 - **Dataset**: 140k Real & Fake Faces  
-- **Model**: EfficientNetB0 (fine‑tuned) + Dlib landmarks & head‑pose estimation  
-  - Extract pose vectors; focus on facial dynamics inconsistencies  
-  - Add dense layers, batch‑norm, LeakyReLU, dropout  
-  - Freeze half of base layers → train 2 epochs with Adam  
+- **Model**: EfficientNetB0 (fine‑tuned)
 - **Performance**:  
   - **Accuracy**: 98.23%  
   - **Precision**: 98.62%  

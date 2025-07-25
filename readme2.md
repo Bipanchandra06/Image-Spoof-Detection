@@ -146,7 +146,7 @@ The system is built from three distinct detection modules. Each was trained and 
 
 ## Tech Stack
 -   **Machine Learning:** TensorFlow, Keras, Scikit-learn
--   **Computer Vision:** OpenCV, Dlib, Scikit-image
+-   **Computer Vision:** OpenCV, Scikit-image
 -   **Core Libraries:** Python, NumPy
 
 ---

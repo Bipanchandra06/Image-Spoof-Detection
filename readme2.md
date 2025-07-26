@@ -61,7 +61,7 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 ## Datasets
 
 - **CASIA-FASD**  
-  Large crowd‑collected face anti‑spoofing dataset with print, replay, and mask attacks (used in Module 2).
+  Large crowd‑collected face anti‑spoofing dataset with print  attacks (used in Module 2).
 
 - **140k Real and Fake Faces**  
   70k real images (Flickr) + 70k StyleGAN‑generated fakes (used in Module 3).

@@ -77,7 +77,6 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 
 - **Web App Backend (Flask)**  
 - **Deep Models**: resize to 224 × 224, normalize to [0,1]  
-- **LBP Pipeline**: grayscale ->uniform LBP (radius=3, points=24) → histogram → SVM
 
 ---
 
@@ -111,7 +110,7 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 ### Module 4: 3D Mask Spoofing Detection
 
 - **Dataset**: LFW + mask‑wearing video frames  
-- **Preprocessing**: grayscale → Log‑TV denoise → LBP (radius=3, points=24)  
+- **Preprocessing**: grayscale → LBP (radius=3, points=24)  
 - **Model**: SVM (RBF) on normalized LBP histograms  
 - **Performance**:  
   - **Accuracy**: 95.63%  

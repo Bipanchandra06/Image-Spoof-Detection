@@ -77,7 +77,7 @@ Each uploaded image is preprocessed and then passed through three modules in seq
 
 - **Web App Backend (Flask)**  
 - **Deep Models**: resize to 224 × 224, normalize to [0,1]  
-- **LBP Pipeline**: grayscale → Log‑TV denoise → uniform LBP (radius=3, points=24) → histogram → SVM
+- **LBP Pipeline**: grayscale ->uniform LBP (radius=3, points=24) → histogram → SVM
 
 ---
 

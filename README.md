@@ -19,7 +19,7 @@ The system is built from three distinct detection modules. Each was trained and 
 | **Deepfake Detection** | EfficientNetB0, Dlib   | 98.22%   |
 | **3D Mask Spoofing**   | SVM on LBP features    | 96.00%   |
 
-*This was a team project. My primary contribution was the development of the **3D Mask Spoofing** module.*
+*This was a team project. My primary contribution was the development of the **Web App & Image Preprocessing** module.*
 
 ---
 
